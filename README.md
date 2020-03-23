@@ -1,5 +1,5 @@
 # First Assignment IoT 2020
-This assignment consists in developing two MQTT clients on our local machine and connect it to a MQTT broker. For this purpose we will use a python script for the two clients and ThingsBoard for the broker.
+This assignment consists in developing two MQTT clients on our local machine and connect them to a MQTT broker. For this purpose we will use a python script for the two clients and ThingsBoard for the broker.
 ## Python MQTT Client
 The developed python script (stations.py) relies on the publicly available paho-mqtt library [[https://pypi.org/project/paho-mqtt/](https://pypi.org/project/paho-mqtt/)]. This library provides a MQTT implementation, through which we will create our client.
 Our clients represent two virtual station, named Station A and Station B, which at regular intervals output the following values:
