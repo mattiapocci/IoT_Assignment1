@@ -17,3 +17,5 @@ This powerful tool comes for free in the demo version, which is sufficient for o
 Have a look at this article for a full hands-on tutorial: [https://www.linkedin.com/pulse/hands-on-tutorial-implementation-two-virtual-stations-mattia-pocci]
 ## Video demonstration
 For a full video demonstration of the software in action check out this link: [https://youtu.be/22f--kObWeA]
+## Public dashboard
+Here is the link of the public dashboard: https://demo.thingsboard.io/dashboard/108941e0-6b83-11ea-8e0a-7d0ef2a682d3?publicId=71a3a600-6a11-11ea-ad02-b3576b7d39f1
