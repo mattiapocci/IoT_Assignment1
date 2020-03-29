@@ -1,7 +1,14 @@
 import paho.mqtt.client as mqtt
 from messageHandler import message_handler
 import time
-#Local Broker connection
+# This is the main script for Assignment 2 of IoT
+# Its purpose is to subscribe to our local mqtt-sn broker (mosquitto.rsmb in my case)
+# Every time it receives a message, it will send it to the messageHandler, which will do the work
+# It is important to note that since my device on thingsboard is an entire station, our local virtual
+# station will send the data only when the payload is complete (i.e. when it has every value, this may lead to data loss while the payload is
+# still incomplete)
+
+# Local Broker connection
 local_broker="127.0.0.1"
 local_port=1886
 
