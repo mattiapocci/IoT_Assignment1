@@ -1,10 +1,10 @@
 import paho.mqtt.client as mqtt
 import random as rnd
 import time
-
+import os
 #ThingsBoard integration
-ACCESS_TOKEN_1='NbIwSmfPyfdSZ81MpHyL'   #this access token is used by Station A to connect to ThingsBoard
-ACCESS_TOKEN_2='Nqdsei4qVHggzEFDtZEt'   #this access token is used by Station B to connect to ThingsBoard
+ACCESS_TOKEN_1=os.environ.get("STATION_A")   #this access token is used by Station A to connect to ThingsBoard
+ACCESS_TOKEN_2=os.environ.get("STATION_B")   #this access token is used by Station B to connect to ThingsBoard
 broker="demo.thingsboard.io"            #default broker provided by ThingsBoard with its port
 port=1883
 

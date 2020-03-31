@@ -1,5 +1,6 @@
 import paho.mqtt.client as mqtt
 import time
+import os
 
 #function definitions
 def on_connect(client, userdata, flags, rc):        #connection feedback
@@ -15,7 +16,7 @@ def on_log(client, userdata, level, buf):
     print("log: ",buf)
 
 class StationA:
-    ACCESS_TOKEN='NbIwSmfPyfdSZ81MpHyL'     #access token to write on thingsboard
+    ACCESS_TOKEN=os.environ.get("STATION_A")    #access token to write on thingsboard
     broker="demo.thingsboard.io"            #default broker provided by ThingsBoard with its port
     port=1883
     topic = "v1/devices/me/telemetry"       #default topic
@@ -72,7 +73,7 @@ class StationA:
         this.rain = None
 
 class StationB:
-    ACCESS_TOKEN='Nqdsei4qVHggzEFDtZEt'     #access token to write on thingsboard
+    ACCESS_TOKEN=os.environ.get("STATION_B")     #access token to write on thingsboard
     broker="demo.thingsboard.io"            #default broker provided by ThingsBoard with its port
     port=1883
     topic = "v1/devices/me/telemetry"       #default topic

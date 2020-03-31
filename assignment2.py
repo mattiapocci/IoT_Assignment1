@@ -38,7 +38,6 @@ def on_log(client, userdata, level, buf):       #used for logging purposes
 
 #instantiating or messageHandler
 handler = message_handler(1)
-
 #instantiating local subscriber for station A
 local_A = mqtt.Client("A")
 local_A.on_connect = on_connect
