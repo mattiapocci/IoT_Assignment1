@@ -171,4 +171,5 @@ dmypy.json
 # Ignore all local history of files
 .history
 
+secrets.txt
 # End of https://www.gitignore.io/api/c,python,visualstudiocode

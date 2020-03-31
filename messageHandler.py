@@ -22,28 +22,28 @@ class message_handler:
     stationA = None
     stationB = None
 
-    def __init__(self, identifier):
+    def __init__(self, identifier):                     #when instantiated creates a local stationA and stationB
         self.identifier = identifier
         self.stationA = StationA()
         self.stationB = StationB()
 
-    def publish_A(self):
+    def publish_A(self):                                #after every value update try to publish on thingsboard
         if self.stationA.ready is True:
             pl = build_payload(self.stationA.temp,self.stationA.hum,self.stationA.windir,self.stationA.winint,self.stationA.rain)
             self.stationA.set_payload(pl)
             self.stationA.connect_a()
-        else:
+        else:                                           #the station has some of the data fields set to None
             print("Cannot publish, not enough data")
 
-    def publish_B(self):
+    def publish_B(self):                                #after every value update try to publish on thingsboard
         if self.stationB.ready is True:
             pl = build_payload(self.stationB.temp,self.stationB.hum,self.stationB.windir,self.stationB.winint,self.stationB.rain)
             self.stationA.set_payload(pl)
             self.stationA.connect_a()
-        else:
+        else:                                           #the station has some of the data fields set to None
             print("Cannot publish, not enough data")
 
-    def handle_A(self):
+    def handle_A(self):                                 #topic addresses station a, so update the respective value
         print("a")
         if "temp" in self.topic:
             self.stationA.set_temp(self.payload)
@@ -57,7 +57,7 @@ class message_handler:
             self.stationA.set_rain(self.payload)
         self.publish_A()
     
-    def handle_B(self):
+    def handle_B(self):                                 #topic addresses station b, so update the respective value
         print("b")
         if "temp" in self.topic:
             self.stationB.set_temp(self.payload)
@@ -71,13 +71,13 @@ class message_handler:
             self.stationB.set_rain(self.payload)
         self.publish_B()
 
-    def handle_message(self):
+    def handle_message(self):                   #topic filtering based on stationA or stationB
         if "stationA" in str(self.topic):
             self.handle_A()
         elif "stationB" in str(self.topic):
             self.handle_B()
 
-    def set_message(self, topic, payload):
+    def set_message(self, topic, payload):      #sets self variables to the current values
         self.topic = topic
         self.payload = payload
         self.handle_message()

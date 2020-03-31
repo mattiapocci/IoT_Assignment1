@@ -54,7 +54,7 @@ class StationA:
             self.ready = True    #I have a complete set of data and I can publish    
 
     
-    def connect_a(self):
+    def connect_a(self):                    #connect to thingsboard and publish data
         a = mqtt.Client()
         a.on_connect=on_connect
         a.on_publish=on_publish
@@ -81,7 +81,7 @@ class StationB:
     windir = None
     winint = None
     rain = None
-    ready = False
+    ready = False                           #true if it has enough data to publish to thingsboard
     payload = None
     def set_payload(self, payload):
         self.payload = payload
@@ -110,7 +110,7 @@ class StationB:
         if self.hum is not None and self.windir is not None and self.winint is not None and self.temp is not None:
             self.ready = True    #I have a complete set of data and I can publish    
 
-    def connect_b(self):
+    def connect_b(self):                    #connect to thingsboard and publish data
         b = mqtt.Client()
         b.on_connect=on_connect
         b.on_publish=on_publish
