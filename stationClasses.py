@@ -31,32 +31,27 @@ class StationA:
 
     def set_temp(self, temp):
         self.temp = temp
-        if self.payload is None:     #otherwise I am ready for sure
-            if self.hum is not None and self.windir is not None and self.winint is not None and self.rain is not None:
-                self.ready = True    #I have a complete set of data and I can publish
+        if self.hum is not None and self.windir is not None and self.winint is not None and self.rain is not None:
+            self.ready = True    #I have a complete set of data and I can publish
     
     def set_hum(self, hum):
         self.hum = hum
-        if self.payload is None:
-            if self.temp is not None and self.windir is not None and self.winint is not None and self.rain is not None:
-                self.ready = True    #I have a complete set of data and I can publish 
+        if self.temp is not None and self.windir is not None and self.winint is not None and self.rain is not None:
+            self.ready = True    #I have a complete set of data and I can publish 
 
     def set_windir(self, windir):
         self.windir = windir
-        if self.payload is None:
-            if self.hum is not None and self.temp is not None and self.winint is not None and self.rain is not None:
-                self.ready = True    #I have a complete set of data and I can publish  
+        if self.hum is not None and self.temp is not None and self.winint is not None and self.rain is not None:
+            self.ready = True    #I have a complete set of data and I can publish  
 
     def set_winint(self, winint):
         self.winint = winint
-        if self.payload is None:
-            if self.hum is not None and self.windir is not None and self.temp is not None and self.rain is not None:
-                self.ready = True    #I have a complete set of data and I can publish    
+        if self.hum is not None and self.windir is not None and self.temp is not None and self.rain is not None:
+            self.ready = True    #I have a complete set of data and I can publish    
     def set_rain(self, rain):
         self.rain = rain
-        if self.payload is None:
-            if self.hum is not None and self.windir is not None and self.winint is not None and self.temp is not None:
-                self.ready = True    #I have a complete set of data and I can publish    
+        if self.hum is not None and self.windir is not None and self.winint is not None and self.temp is not None:
+            self.ready = True    #I have a complete set of data and I can publish    
 
     
     def connect_a(self):
@@ -69,6 +64,12 @@ class StationA:
         a.connect(self.broker,self.port,60)
         time.sleep(5)
         a.publish(self.topic,self.payload)
+        this.ready = False
+        this.temp = None
+        this.hum = None
+        this.windir = None
+        this.winint = None
+        this.rain = None
 
 class StationB:
     ACCESS_TOKEN='Nqdsei4qVHggzEFDtZEt'     #access token to write on thingsboard
@@ -87,32 +88,27 @@ class StationB:
 
     def set_temp(self, temp):
         self.temp = temp
-        if self.payload is None:     #otherwise I am ready for sure
-            if self.hum is not None and self.windir is not None and self.winint is not None and self.rain is not None:
-                self.ready = True    #I have a complete set of data and I can publish
+        if self.hum is not None and self.windir is not None and self.winint is not None and self.rain is not None:
+            self.ready = True    #I have a complete set of data and I can publish
     
     def set_hum(self, hum):
         self.hum = hum
-        if self.payload is None:
-            if self.temp is not None and self.windir is not None and self.winint is not None and self.rain is not None:
-                self.ready = True    #I have a complete set of data and I can publish 
+        if self.temp is not None and self.windir is not None and self.winint is not None and self.rain is not None:
+            self.ready = True    #I have a complete set of data and I can publish 
 
     def set_windir(self, windir):
         self.windir = windir
-        if self.payload is None:
-            if self.hum is not None and self.temp is not None and self.winint is not None and self.rain is not None:
-                self.ready = True    #I have a complete set of data and I can publish  
+        if self.hum is not None and self.temp is not None and self.winint is not None and self.rain is not None:
+            self.ready = True    #I have a complete set of data and I can publish  
 
     def set_winint(self, winint):
         self.winint = winint
-        if self.payload is None:
-            if self.hum is not None and self.windir is not None and self.temp is not None and self.rain is not None:
-                self.ready = True    #I have a complete set of data and I can publish    
+        if self.hum is not None and self.windir is not None and self.temp is not None and self.rain is not None:
+            self.ready = True    #I have a complete set of data and I can publish    
     def set_rain(self, rain):
         self.rain = rain
-        if self.payload is None:
-            if self.hum is not None and self.windir is not None and self.winint is not None and self.temp is not None:
-                self.ready = True    #I have a complete set of data and I can publish    
+        if self.hum is not None and self.windir is not None and self.winint is not None and self.temp is not None:
+            self.ready = True    #I have a complete set of data and I can publish    
 
     def connect_b(self):
         b = mqtt.Client()
@@ -124,4 +120,9 @@ class StationB:
         b.connect(self.broker,self.port,60)
         time.sleep(5)
         b.publish(self.topic,self.payload)
-        b.disconnect()
+        this.ready = False
+        this.temp = None
+        this.hum = None
+        this.windir = None
+        this.winint = None
+        this.rain = None
