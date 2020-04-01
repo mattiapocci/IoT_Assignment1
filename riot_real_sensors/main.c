@@ -293,38 +293,38 @@ static int cmd_station(int argc, char **argv)
 
     while(1){
 
-        sleep(5);
+        xtimer_sleep(5);
         (void)argc;
         (void)argv;
         char arg3[4];
         get_temp(arg3);
         char *args[3] = {"pub", "/sensor/stationA/data/temp", arg3};
         cmd_pub(3,args);
-        sleep(5);
+        xtimer_sleep(5);
 
         char arg4[4];
         get_hum(arg4);
         char *args1[3] = {"pub", "/sensor/stationA/data/hum", arg4};
         cmd_pub(3,args1);
-        sleep(5);
+        xtimer_sleep(5);
 
         char arg5[4];
         get_windir(arg5);
         char *args2[3] = {"pub", "/sensor/stationA/data/windir", arg5};
         cmd_pub(3,args2);
-        sleep(5);
+        xtimer_sleep(5);
 
         char arg6[4];
         get_windir(arg6);
         char *args3[3] = {"pub", "/sensor/stationA/data/winint", arg6};
         cmd_pub(3,args3);
-        sleep(5);
+        xtimer_sleep(5);
 
         char arg7[4];
         get_windir(arg7);
         char *args4[3] = {"pub", "/sensor/stationA/data/rain", arg7};
         cmd_pub(3,args4);
-        sleep(5);
+        xtimer_sleep(5);
 
     }
 
