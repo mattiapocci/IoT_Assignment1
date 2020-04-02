@@ -39,16 +39,16 @@ def on_log(client, userdata, level, buf):       #used for logging purposes
 #instantiating or messageHandler
 handler = message_handler(1)
 #instantiating local subscriber for station A
-local_A = mqtt.Client("A")
-local_A.on_connect = on_connect
-local_A.on_publish = on_publish
-local_A.on_subscribe = on_subscribe
-local_A.on_message = on_message
-print("Local station A created successfully")
+bridge = mqtt.Client("Bridge")
+bridge.on_connect = on_connect
+bridge.on_publish = on_publish
+bridge.on_subscribe = on_subscribe
+bridge.on_message = on_message
+print("Local bridge created successfully")
 
 #subscribing to local broker in order to get sensor data
-local_A.connect(local_broker,local_port,60)
-local_A.subscribe("/sensor/+/data/#")
+bridge.connect(local_broker,local_port,60)
+bridge.subscribe("/sensor/+/data/#")
 
 #the loop forever function handles reconnections
-local_A.loop_forever()
+bridge.loop_forever()

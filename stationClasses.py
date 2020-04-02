@@ -65,12 +65,12 @@ class StationA:
         a.connect(self.broker,self.port,60)
         time.sleep(5)
         a.publish(self.topic,self.payload)
-        this.ready = False
-        this.temp = None
-        this.hum = None
-        this.windir = None
-        this.winint = None
-        this.rain = None
+        self.ready = False
+        self.temp = None
+        self.hum = None
+        self.windir = None
+        self.winint = None
+        self.rain = None
 
 class StationB:
     ACCESS_TOKEN=os.environ.get("STATION_B")     #access token to write on thingsboard
@@ -121,9 +121,9 @@ class StationB:
         b.connect(self.broker,self.port,60)
         time.sleep(5)
         b.publish(self.topic,self.payload)
-        this.ready = False
-        this.temp = None
-        this.hum = None
-        this.windir = None
-        this.winint = None
-        this.rain = None
+        self.ready = False
+        self.temp = None
+        self.hum = None
+        self.windir = None
+        self.winint = None
+        self.rain = None
