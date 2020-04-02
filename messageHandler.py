@@ -38,8 +38,8 @@ class message_handler:
     def publish_B(self):                                #after every value update try to publish on thingsboard
         if self.stationB.ready is True:
             pl = build_payload(self.stationB.temp,self.stationB.hum,self.stationB.windir,self.stationB.winint,self.stationB.rain)
-            self.stationA.set_payload(pl)
-            self.stationA.connect_a()
+            self.stationB.set_payload(pl)
+            self.stationB.connect_a()
         else:                                           #the station has some of the data fields set to None
             print("Cannot publish, not enough data")
 
