@@ -1,4 +1,6 @@
-# First Assignment IoT 2020
+# Assignments of IoT 2020, Master of Engineering in Computer Science, Sapienza University of Rome
+
+# First Assignment
 This assignment consists in developing two MQTT clients on our local machine and connect them to a MQTT broker. For this purpose we will use a python script for the two clients and ThingsBoard for the broker.
 ## Python MQTT Client
 The developed python script (stations.py) relies on the publicly available paho-mqtt library [[https://pypi.org/project/paho-mqtt/](https://pypi.org/project/paho-mqtt/)]. This library provides a MQTT implementation, through which we will create our client.
@@ -19,3 +21,9 @@ Have a look at this article for a full hands-on tutorial: [https://www.linkedin.
 For a full video demonstration of the software in action check out this link: [https://youtu.be/22f--kObWeA]
 ## Public dashboard
 Here is the link of the public dashboard: https://demo.thingsboard.io/dashboard/108941e0-6b83-11ea-8e0a-7d0ef2a682d3?publicId=71a3a600-6a11-11ea-ad02-b3576b7d39f1
+
+# Second Assignment
+This assignment consists in extending the previous one, replacing the two environmental stations by means of Riot OS applications. Given that a Riot OS application is capable to handle the MQTT-SN protocol, we will develop an MQTT-SN to MQTT bridge, in order to send data to ThingsBoard.
+## Hands on tutorial
+
+## Video demonstration
