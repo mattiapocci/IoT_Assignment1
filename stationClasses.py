@@ -106,6 +106,7 @@ class StationB:
         self.winint = winint
         if self.hum is not None and self.windir is not None and self.temp is not None and self.rain is not None:
             self.ready = True    #I have a complete set of data and I can publish    
+
     def set_rain(self, rain):
         self.rain = rain
         if self.hum is not None and self.windir is not None and self.winint is not None and self.temp is not None:
@@ -117,7 +118,6 @@ class StationB:
         b.on_publish=on_publish
         b.on_log=on_log
         b.username_pw_set(self.ACCESS_TOKEN)
-        print("Client created with id " + self.ID)
         b.connect(self.broker,self.port,60)
         time.sleep(5)
         b.publish(self.topic,self.payload)
