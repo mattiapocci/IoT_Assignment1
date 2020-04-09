@@ -1,5 +1,5 @@
 from stationClasses import StationA, StationB
-
+import re
 #building json payload
 def build_payload(t,h,wd,wi,r):
     payload = '{"Temperature":"'
@@ -27,6 +27,23 @@ class message_handler:
         self.stationA = StationA()
         self.stationB = StationB()
 
+    # Assignment 3 related functions, here we have an already complete payload
+    def publish(self, id, payload):
+        if "station_a" in id:
+            self.publish_A3(payload)
+        elif "station_b" in id:
+            self.publish_B3(payload)
+
+    def publish_A3(self, payload):
+        self.stationA.set_payload(payload)
+        self.stationA.connect_a()
+
+    def publish_B3(self, payload):
+        self.stationB.set_payload(payload)
+        self.stationB.connect_b()
+
+
+    
     def publish_A(self):                                #after every value update try to publish on thingsboard
         if self.stationA.ready is True:
             pl = build_payload(self.stationA.temp,self.stationA.hum,self.stationA.windir,self.stationA.winint,self.stationA.rain)
