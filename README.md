@@ -25,5 +25,6 @@ Here is the link of the public dashboard: https://demo.thingsboard.io/dashboard/
 # Second Assignment
 This assignment consists in extending the previous one, replacing the two environmental stations by means of Riot OS applications. Given that a Riot OS application is capable to handle the MQTT-SN protocol, we will develop an MQTT-SN to MQTT bridge, in order to send data to ThingsBoard.
 ## Hands on tutorial
-
+Have a look at this article for a full hands-on tutorial: [https://www.linkedin.com/pulse/hands-on-tutorial-mqtt-sn-mqtt-bridge-using-python-riot-mattia-pocci]
 ## Video demonstration
+For a full video demonstration of the software in action check out this link: [https://youtu.be/Sbsyoo3aPLI]
