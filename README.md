@@ -28,3 +28,11 @@ This assignment consists in extending the previous one, replacing the two enviro
 Have a look at this article for a full hands-on tutorial: [https://www.linkedin.com/pulse/hands-on-tutorial-mqtt-sn-mqtt-bridge-using-python-riot-mattia-pocci]
 ## Video demonstration
 For a full video demonstration of the software in action check out this link: [https://youtu.be/Sbsyoo3aPLI]
+
+# Third Assignment
+This assignment consists in replacing the MQTT protocol exploited in the previous assignments with LoRaWAN and TheThingsNetwork [https://www.thethingsnetwork.org/].
+Since TTN has a built in MQTT broker, we will slightly modify the previously built Python Bridge in order to publish data to our ThingsBoard dashboard.
+## Hands on tutorial
+Have a look at this article for a full hands-on tutorial: []
+## Video demonstration
+For a full video demonstration of the software in action check out this link: []
