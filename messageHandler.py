@@ -28,6 +28,8 @@ class message_handler:
         self.stationB = StationB()
 
     # Assignment 3 related functions, here we have an already complete payload
+    # We give an already built payload directly to the stations, which will publish
+    # it on thingsboard
     def publish(self, id, payload):
         if "station_a" in id:
             self.publish_A3(payload)
