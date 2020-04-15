@@ -1,4 +1,3 @@
-import paho.mqtt.client as mqtt
 from messageHandler import message_handler
 import time
 import ttn          #necessary to instantiate a ttn HandlerClient
