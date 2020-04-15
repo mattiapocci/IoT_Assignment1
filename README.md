@@ -34,6 +34,6 @@ This assignment consists in replacing the MQTT protocol exploited in the previou
 To achieve this purpose, we will use the B-L072Z-LRWAN1 LoRa kit [https://www.st.com/en/evaluation-tools/b-l072z-lrwan1.html]. In particular, we will flash a Riot OS firmware on top of them to retrieve sensor data and send them to TTN via LoRaWAN.
 Since TTN has a built in MQTT broker, we will slightly modify the previously built Python Bridge in order to publish data to our ThingsBoard dashboard.
 ## Hands on tutorial
-Have a look at this article for a full hands-on tutorial: []
+Have a look at this article for a full hands-on tutorial: [https://www.linkedin.com/pulse/hands-on-tutorial-publishing-data-from-iot-lab-via-lorawan-pocci]
 ## Video demonstration
-For a full video demonstration of the software in action check out this link: []
+For a full video demonstration of the software in action check out this link: [https://youtu.be/5NQKkk4fbZo]
