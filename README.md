@@ -37,3 +37,13 @@ Since TTN has a built in MQTT broker, we will slightly modify the previously bui
 Have a look at this article for a full hands-on tutorial: [https://www.linkedin.com/pulse/hands-on-tutorial-publishing-data-from-iot-lab-via-lorawan-pocci]
 ## Video demonstration
 For a full video demonstration of the software in action check out this link: [https://youtu.be/5NQKkk4fbZo]
+
+# Fourth Assignment
+This assignment consists in building a Crowd Sensing Application, using HTML5 and the Generic Sensor API.
+To achieve this purpose, we will use Node.js. In particular, since the Generic Sensor API is available only through an https connection, we will set up a local https server.
+Our webapp will collect accelerometer data, and will evaluate whether the user is walking or not. At first the estimation will be performed via ThingsBoard (using a rule chain), while in the second part of the assignment it will be performed directly on the user's smartphone via edge computing.
+The output of our model will be visible through a ThingsBoard dashboard
+## Hands on tutorial
+TODO
+## Video demonstration
+TODO
