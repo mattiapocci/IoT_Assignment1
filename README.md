@@ -43,6 +43,7 @@ This assignment consists in building a Crowd Sensing Application, using HTML5 an
 To achieve this purpose, we will use Node.js. In particular, since the Generic Sensor API is available only through an https connection, we will set up a local https server.
 Our webapp will collect accelerometer data, and will evaluate whether the user is walking or not. At first the estimation will be performed via ThingsBoard (using a rule chain), while in the second part of the assignment it will be performed directly on the user's smartphone via edge computing.
 The output of our model will be visible through a ThingsBoard dashboard
+The code of this assignment is located in the assignment4 folder of this repo.
 ## Hands on tutorial
 Have a look at this article for a full hands-on tutorial: [https://www.linkedin.com/pulse/hands-on-tutorial-crowdsensing-application-using-general-mattia-pocci]
 ## Video demonstration
