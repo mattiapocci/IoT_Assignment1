@@ -8,8 +8,8 @@ const app = express();
 app.use(express.static('public'));
 
 https.createServer({
-    key: fs.readFileSync('../conf/key.pem'),              //our ca key
-    cert: fs.readFileSync('../conf/cert.pem')             //our ca certificate
+    key: fs.readFileSync('../../conf/key.pem'),              //our ca key
+    cert: fs.readFileSync('../../conf/cert.pem')             //our ca certificate
   }, app)
   .listen(3000, '192.168.1.148',function () {
     console.log('Https server is listening on port 3000');

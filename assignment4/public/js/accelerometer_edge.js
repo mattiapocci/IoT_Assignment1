@@ -8,7 +8,7 @@ let sensor = new Accelerometer({frequency: 0.5});
 /* Global variables */
 var moves = 0;                                            //counter for movement values
 var walking = false;                                      //prediction value
-var counter = 0;                                          //when this counter reaches 10 we will make a prediction
+var counter = 1;                                          //when this counter reaches 10 we will make a prediction
 
 sensor.start();                                           //start the accelerometer
 /* We make the prediction every 10 messages */
@@ -38,8 +38,8 @@ sensor.onreading = () => {
     }
     counter = 0;
   }
-  if(counter != 0)
-    counter = counter + 1;              //increment counter if it has not reached the end
+  
+  counter = counter + 1;              //increment counter if it has not reached the end
   
   /* Update prediction value in HTML */
   if(walking){
