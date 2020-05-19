@@ -44,6 +44,8 @@ To achieve this purpose, we will use Node.js. In particular, since the Generic S
 Our webapp will collect accelerometer data, and will evaluate whether the user is walking or not. At first the estimation will be performed via ThingsBoard (using a rule chain), while in the second part of the assignment it will be performed directly on the user's smartphone via edge computing.
 The output of our model will be visible through a ThingsBoard dashboard
 The code of this assignment is located in the assignment4 folder of this repo.
+## Dashboard
+The final public dashboard is available here: [https://demo.thingsboard.io:/dashboard/24f53670-92d9-11ea-9a66-358c6522b855?publicId=71a3a600-6a11-11ea-ad02-b3576b7d39f1]
 ## Hands on tutorial
 Have a look at this article for a full hands-on tutorial: [https://www.linkedin.com/pulse/hands-on-tutorial-crowdsensing-application-using-general-mattia-pocci]
 ## Video demonstration
